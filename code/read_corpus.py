@@ -15,6 +15,7 @@ def read_in_conll_file(conll_file, delimiter='\t'):
     return conll_as_csvreader
 
 def get_token(row):
+    # print(row)
     return row[3]
 
 def get_negcue_label(row):
@@ -23,6 +24,8 @@ def get_negcue_label(row):
 def list_of_tokens(csv_object):
     tokens = []
     for row in csv_object:
+        if len(row) == 0:
+            continue
         tokens.append(get_token(row))
     return tokens
 
@@ -34,5 +37,6 @@ def main(args=None):
     tokenlist = list_of_tokens(conll)
     print(tokenlist)
 
-args = ['x', r'C:\Users\Tessel Wisman\Documents\TextMining\AppliedTMMethods\bioscope-corpus\bioscope.clinical.columns.txt']
-main(args)
+# args = ['x', r'C:\Users\Tessel Wisman\Documents\TextMining\AppliedTMMethods\bioscope-corpus\bioscope.clinical.columns.txt']
+# args = ['x', r"bioscope.clinical.columns(1).txt"]
+# main(args)

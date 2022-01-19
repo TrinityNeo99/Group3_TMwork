@@ -57,5 +57,5 @@ def main(args=None):
         print(n_gram_feature, lexicon_feature)
 
 
-args = ['x', r'C:\Users\Tessel Wisman\Documents\TextMining\AppliedTMMethods\bioscope-corpus\bioscope.papers.columns.txt']
+args = ['x', r"bioscope.clinical.columns(1).txt"]
 main(args)
